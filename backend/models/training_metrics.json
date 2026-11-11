@@ -1,0 +1,29 @@
+{
+  "model": "roadsafety-yolov8n.pt",
+  "base_checkpoint": "yolov8n.pt",
+  "dataset": "SobanHM/Road-Objects-Detection-Dataset + LibreYOLO/road-traffic",
+  "device": "0",
+  "epochs_requested": 8,
+  "imgsz": 416,
+  "batch": 2,
+  "test_split": {
+    "metrics/precision(B)": 0.7051747004345251,
+    "metrics/recall(B)": 0.37757965970792134,
+    "metrics/mAP50(B)": 0.39863667669333236,
+    "metrics/mAP50-95(B)": 0.26410214430280093,
+    "fitness": 0.2775555975418541
+  },
+  "epochs_completed": 8,
+  "sample_clip_smoke_test": {
+    "video": "visaitech_clip_040.mp4",
+    "sampled_frames": 8,
+    "decoded_frames": 57,
+    "detection_count": 13,
+    "class_counts": {
+      "motorcycle": 5,
+      "pedestrian": 2,
+      "bicycle": 6
+    },
+    "mean_confidence": 0.4598
+  }
+}

@@ -1,0 +1,18 @@
+# Uploaded-video analysis works in Docker. Webcam mode needs a device passthrough (Linux only: uncomment `devices`)
+# and is much easier to run natively (see README).
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_URL: sqlite:////data/road_safety.db
+      UPLOAD_DIR: /data/videos
+      REPORT_DIR: /data/reports
+    volumes: ["./data:/data"]
+    # devices: ["/dev/video0:/dev/video0"]
+  frontend:
+    build: ./frontend
+    ports: ["5173:5173"]
+    environment:
+      VITE_API_TARGET: http://backend:8000
+    depends_on: [backend]

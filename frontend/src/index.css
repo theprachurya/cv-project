@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0f18;
+  --color-panel: #111826;
+  --color-line: #1f2a3d;
+  --color-accent: #3b82f6;
+  --color-risk-high: #ef4444;
+  --color-risk-med: #eab308;
+  --color-risk-low: #22c55e;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body { background: var(--color-bg); color: #e5ebf5; font-family: var(--font-sans); }

@@ -1,0 +1,12 @@
+{
+  "video": "visaitech_clip_040.mp4",
+  "sampled_frames": 8,
+  "decoded_frames": 57,
+  "detection_count": 13,
+  "class_counts": {
+    "motorcycle": 5,
+    "pedestrian": 2,
+    "bicycle": 6
+  },
+  "mean_confidence": 0.4598
+}
